@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(154, 232, 235);
+    font-size:22px;
+}
+
+
+h1{
+    background-color:rgb(183, 241, 234);
+    font-size:45px
+}
+
+
+#score_span{
+    font-size:22px;
+    margin-left:-1200px;
+}
+
+#timer_span{
+    font-size:22px;
+    float:right;
+    margin-right:20px;
+}
+
+#sketch_draw{
+    color:rgb(194, 32, 32);
+    font-size:22px;
+}
+
+#show_sketch{
+    float:right;
+    border-radius:20px;
+    margin-top: 5px;
+}
