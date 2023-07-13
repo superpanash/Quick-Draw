@@ -9,7 +9,50 @@ var sketch=quick_draw_data_set[random_number];
 document.getElementById("sketch_draw").innerHTML="Sketch To Be Drawn : "+sketch;
 
 var timer_counter=0;
-timer_check="";
-drawn_sketch="";
-answer_holder="";
-score=0;
+var timer_check="";
+var drawn_sketch="";
+var answer_holder="";
+var score=0;
+
+
+function updateCanvas(){
+    
+
+    var random_number= Math.floor((Math.random()*quick_draw_data_set.length)+1);
+
+    console.log(quick_draw_data_set[random_number]);
+    
+    var sketch=quick_draw_data_set[random_number];   
+}
+
+
+function setup(){
+    canvas=createCanvas(280,280);
+    canvas.center();
+    background( "white");
+}
+
+function draw(){
+    check_sketch;
+    if(drawn_sketch=check_sketch){
+        answer_holder="set";
+        score++;
+        document.getElementById("score_span").innerHTML="Timer : "+score;
+    }
+}
+
+function check_sketch(){    
+    timer_counter++;
+    document.getElementById("timer_span").innerHTML="Timer : "+timer_counter;
+    console.log(timer_counter);
+    if(timer_counter<400){
+        timer_counter=0;
+        timer_check="completed";
+    }
+
+    if(answer_holder=set){
+        timer_check="";
+        answer_holder="";
+        updateCanvas();
+    }
+}
